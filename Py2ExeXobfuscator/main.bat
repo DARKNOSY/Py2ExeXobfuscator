@@ -2,7 +2,7 @@
 cls
 color 4
 title Py2ExeXobfuscator @DARKNOSY
-type menu.py
+type menu.txt
 
 Set /p action="Which option are you choosing?: "
 if '%action%'=='1' goto Py2ExeXobfuscator

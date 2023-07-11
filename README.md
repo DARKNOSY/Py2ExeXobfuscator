@@ -35,9 +35,9 @@ Program with obfuscator and python 2 exe made easier
  - Py2Exe Process
  
 ### [+] Features 2 add
- - noconsole option
+ - Noconsole option
  - DeObfuscation
- - run as admin option
+ - Run as admin option
  - UnPy2exe
  - UnPy2exeXobfucator
 

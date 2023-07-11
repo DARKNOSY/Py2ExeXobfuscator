@@ -34,6 +34,13 @@ Program with obfuscator and python 2 exe made easier
  - Obfuscation
  - Py2Exe Process
  
+### [+] Features 2 add
+ - noconsole option
+ - DeObfuscation
+ - run as admin option
+ - UnPy2exe
+ - UnPy2exeXobfucator
+
 ### [+] Related
 <a href="https://github.com/DARKNOSY/Bat2ExeXobfuscator">Bat2ExeXobfuscator</a>
 

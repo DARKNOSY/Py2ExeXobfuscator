@@ -75,7 +75,7 @@ exit
 
 :py2exoni
 cls
-pyinstaller --onefile %file%.py -n %nname% 
+pyinstaller --onefile --clean %file%.py -n %nname% 
 cls
 Echo Done !
 set /p action= Do you want to test your file? (y/n)    
@@ -129,7 +129,7 @@ goto Py2ExeXobfuscator3
 
 :py2exoni2
 cls
-pyinstaller --onefile %file%.py -n %nname% 
+pyinstaller --onefile --clean %file%.py -n %nname% 
 cls
 goto Py2ExeXobfuscator3
 

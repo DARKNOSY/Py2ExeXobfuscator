@@ -2,7 +2,7 @@
 cls
 color 4
 title Py2ExeXobfuscator @DARKNOSY
-type menu.txt
+type menu.py
 
 Set /p action="Which option are you choosing?: "
 if '%action%'=='1' goto Py2ExeXobfuscator
@@ -53,6 +53,10 @@ pip install pyinstaller
 cls
 set /p type="Is the type of python file you want to turn into an executable a .py or a .pyw?(py/pyw):   "
 cls
+set /p consoleqq="Do you want to hide the console (y/n):   "
+if '%consoleqq%'=='y' set consoler="--noconsole"
+if '%consoleqq%'=='n' set consoler=""
+cls
 set /p file="What's the name of the python file you want to turn into an executable? (file must be in the folder as this program)    (don't type .py/pyw) (name must not have a space in it's name):   "
 cls
 set /p nname="What do you want the name of the output file to be (don't use a space in the name, use "-" instead):   "
@@ -65,7 +69,7 @@ if '%q%'=='n' goto py2exoni
 cls
 set /p icon="What's the name of the .ico file you want to be the icon of the ouputed file? (file has to be in the same folder as this program):   "
 cls
-pyinstaller --onefile %file%.py --clean --noconsole -i %icon%.ico -n %nname% 
+pyinstaller --onefile %file%.py --clean %consoler% -i %icon%.ico -n %nname% 
 cls
 Echo Done !
 set /p action= Do you want to test your file? (y/n)    
@@ -75,7 +79,7 @@ exit
 
 :py2exoni
 cls
-pyinstaller --onefile --clean %file%.py -n %nname% 
+pyinstaller --onefile %consoler% %file%.py -n %nname% 
 cls
 Echo Done !
 set /p action= Do you want to test your file? (y/n)    
@@ -123,13 +127,13 @@ goto Py2ExeXobfuscator2
 cls
 set /p icon="What's the name of the .ico file you want to be the icon of the ouputed file? (file has to be in the same folder as this program):   "
 cls
-pyinstaller --onefile %file%.py --clean --noconsole -i %icon%.ico -n %nname% 
+pyinstaller --onefile %file%.py --clean %consoler% -i %icon%.ico -n %nname% 
 cls
 goto Py2ExeXobfuscator3
 
 :py2exoni2
 cls
-pyinstaller --onefile --clean %file%.py -n %nname% 
+pyinstaller --onefile %consoler% %file%.py -n %nname% 
 cls
 goto Py2ExeXobfuscator3
 

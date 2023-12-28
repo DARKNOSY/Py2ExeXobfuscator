@@ -24,9 +24,10 @@ cls
 set /p nname="What do you want the name of the output file to be (don't use a space in the name, use "-" instead):   "
 cls
 python OBF.py %file%.py -o %nname%.py
-set /p action= Do you want to test your file? (y/n) 
- if '%action%'=='y' goto oy
- if '%action%'=='n' goto leave
+::set /p action= Do you want to test your file? (y/n) 
+::if '%action%'=='y' goto oy
+::if '%action%'=='n' goto leave
+goto leave2
 exit
 
 :obfw
@@ -37,14 +38,15 @@ set /p nname="What do you want the name of the output file to be (don't use a sp
 cls
 python OBF.py %file%.pyw -o %nname%.pyw
 Echo Done !
-set /p action= Do you want to test your file? (y/n) 
- if '%action%'=='y' goto oy
- if '%action%'=='n' goto leave
+::set /p action= Do you want to test your file? (y/n) 
+::if '%action%'=='y' goto oy
+::if '%action%'=='n' goto leave
+goto leave2
 exit
 
-:oy
-python %file%.%type%
-goto leave
+::oy
+::python %file%.%type%
+::goto leave
 
 :Py2Exe
 title Py2Exe @DARKNOSY
@@ -53,7 +55,7 @@ pip install pyinstaller
 cls
 set /p type="Is the type of python file you want to turn into an executable a .py or a .pyw?(py/pyw):   "
 cls
-set /p consoleqq="Do you want to hide the console (y/n):   "
+set /p consoleqq="Do you want to hide the console? (y/n):   "
 if '%consoleqq%'=='y' set consoler="--noconsole"
 if '%consoleqq%'=='n' set consoler=""
 cls
@@ -61,7 +63,7 @@ set /p file="What's the name of the python file you want to turn into an executa
 cls
 set /p nname="What do you want the name of the output file to be (don't use a space in the name, use "-" instead):   "
 cls
-set /p q="Do you want to add a icon to the outputed file (y/n):   "
+set /p q="Do you want to add a icon to the outputed file? (y/n):   "
 if '%q%'=='y' goto p2exoi
 if '%q%'=='n' goto py2exoni
 
@@ -72,9 +74,10 @@ cls
 pyinstaller --onefile %file%.py --clean %consoler% -i %icon%.ico -n %nname% 
 cls
 Echo Done !
-set /p action= Do you want to test your file? (y/n)    
-if '%action%'=='y' goto p2ey
-if '%action%'=='n' goto leave
+goto leave
+::set /p action= Do you want to test your file? (y/n)    
+::if '%action%'=='y' goto p2ey
+::if '%action%'=='n' goto leave
 exit
 
 :py2exoni
@@ -82,16 +85,17 @@ cls
 pyinstaller --onefile %consoler% %file%.py -n %nname% 
 cls
 Echo Done !
-set /p action= Do you want to test your file? (y/n)    
-if '%action%'=='y' goto p2ey
-if '%action%'=='n' goto leave
+::set /p action= Do you want to test your file? (y/n)    
+::if '%action%'=='y' goto p2ey
+::if '%action%'=='n' goto leave
+goto leave
 exit
 
-:p2ey
-del /q %nname%.spec
-del /s /q "%cd%\build"
-start %cd%\dist\%nname%.exe
-goto leave
+::p2ey
+::del /q %nname%.spec
+::del /s /q "%cd%\build"
+::start %cd%\dist\%nname%.exe
+::goto leave
 
 :Py2ExeXobfuscator
 title Setup @DARKNOSY
@@ -107,9 +111,9 @@ set /p type="Is the type of python file you want to obfuscate a .py or a .pyw?(p
 if '%type%'=='py' goto obfp2
 if '%type%'=='pyw' goto obfw2
 
-:p2ey2
-start %cd%\dist\%nname%.exe
-goto leave
+::p2ey2
+::start %cd%\dist\%nname%.exe
+::goto leave
 
 :obfp2
 cls
@@ -157,14 +161,25 @@ if exist %nname%.%type% del /q %nname%.%type%
 cls
 title Done! @DARKNOSY
 echo Done!
-set /p action= Do you want to test your file? (y/n):    
-if '%action%'=='y' goto p2ey2
-if '%action%'=='n' goto leave
+goto leave
+::set /p action= Do you want to test your file? (y/n):    
+::if '%action%'=='y' goto p2ey2
+::if '%action%'=='n' goto leave
 exit
 
-:leave 
-cls 
+:leave
+cls
 title Thank you! @DARKNOSY
 echo Thank you for Using Py2ExeXobfuscator!
+cd /d "dist"
+start .
+PAUSE
+exit
+
+:leave2
+cls
+title Thank you! @DARKNOSY
+echo Thank you for Using Py2ExeXobfuscator!
+start %SystemRoot%\explorer.exe %cd%
 PAUSE
 exit

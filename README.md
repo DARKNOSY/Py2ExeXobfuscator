@@ -20,7 +20,7 @@
 Program with obfuscator and python 2 exe made easier
 
 ### [+] Installation
-`https://github.com/DARKNOSY/Py2ExeXobfuscator/releases/download/Beta/Py2ExeXobfuscator.zip`
+`Code > Download ZIP`
 
 ### [+] Usage
 `Launch "main.bat"`

@@ -73,6 +73,9 @@ set /p icon="What's the name of the .ico file you want to be the icon of the oup
 cls
 pyinstaller --onefile %file%.py --clean %consoler% -i %icon%.ico -n %nname% 
 cls
+del /q %nname%.spec
+del /s /q "%cd%\build"
+cls
 Echo Done !
 goto leave
 ::set /p action= Do you want to test your file? (y/n)    
@@ -83,6 +86,9 @@ exit
 :py2exoni
 cls
 pyinstaller --onefile %consoler% %file%.py -n %nname% 
+cls
+del /q %nname%.spec
+del /s /q "%cd%\build"
 cls
 Echo Done !
 ::set /p action= Do you want to test your file? (y/n)    

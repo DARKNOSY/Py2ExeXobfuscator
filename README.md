@@ -37,7 +37,7 @@ Program with obfuscator and python 2 exe made easier
  
 ### [+] Features 2 add
  - Upx
- - DeObfuscation
+ - Deobfuscation
  - Run as admin option
  - UnPy2exe
  - UnPy2exeXobfucator

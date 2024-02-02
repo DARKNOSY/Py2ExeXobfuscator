@@ -36,6 +36,7 @@ Program with obfuscator and python 2 exe made easier
  - Noconsole option
  
 ### [+] Features 2 add
+ - Upx
  - DeObfuscation
  - Run as admin option
  - UnPy2exe

@@ -43,12 +43,12 @@ Program with obfuscator and python 2 exe made easier
  - UnPy2exeXobfucator
 
 ### [+] Similar
-<a href="https://github.com/DARKNOSY/Bat2ExeXobfuscator">Bat2ExeXobfuscator</a>
-<a href="https://github.com/DARKNOSY/Ps2ExeXobfuscator">Ps2ExeXobfuscator</a>
+ - <a href="https://github.com/DARKNOSY/Bat2ExeXobfuscator">Bat2ExeXobfuscator</a>
+ - <a href="https://github.com/DARKNOSY/Ps2ExeXobfuscator">Ps2ExeXobfuscator</a>
 
 ### [+] Credits 
-<a href="https://github.com/Blank-c/BlankOBF">Obfuscator</a>
-<a href="https://github.com/pyinstaller/pyinstaller">Py2Exe
+ - <a href="https://github.com/Blank-c/BlankOBF">Obfuscator</a>
+ - <a href="https://github.com/pyinstaller/pyinstaller">Py2Exe
 
 ### [+] Find me on 
 <a href="mailto:dark.help87@yahoo.com" target="_blank"><img src="https://img.shields.io/badge/Email-dark.help87@yahoo.com-blue?style=for-the-badge&logo=gmail"></a>

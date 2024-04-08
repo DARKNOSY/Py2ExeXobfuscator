@@ -4,7 +4,7 @@ color 4
 title Py2ExeXobfuscator @DARKNOSY
 type menu.txt
 
-Set /p action="Which option are you choosing?: "
+Set /p action="> "
 if '%action%'=='1' goto Py2ExeXobfuscator
 if '%action%'=='2' goto Py2Exe
 if '%action%'=='3' goto Obfuscator

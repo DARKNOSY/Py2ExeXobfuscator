@@ -22,8 +22,11 @@ Program with obfuscator and python 2 exe made easier
 ### [+] Installation
 `Code > Download ZIP`
 
-### [+] Usage
-`Launch "main.bat"`
+### [+] Usage & Usage
+- `git clone https://github.com/DARKNOSY/Py2ExeXobfuscator/`
+- `cd Py2ExeXobfuscator`
+- `cd Py2ExeXobfuscator`
+- `.\main.bat`
 
 ### [+] Screenshot
 ![screenshot](https://github.com/DARKNOSY/Py2ExeXobfuscator/blob/main/MENU.png?raw=true)
@@ -41,6 +44,7 @@ Program with obfuscator and python 2 exe made easier
  - Run as admin option
  - UnPy2exe
  - UnPy2exeXobfucator
+ - Cert
 
 ### [+] Similar
  - <a href="https://github.com/DARKNOSY/Bat2ExeXobfuscator">Bat2ExeXobfuscator</a>
@@ -49,6 +53,3 @@ Program with obfuscator and python 2 exe made easier
 ### [+] Credits 
  - <a href="https://github.com/Blank-c/BlankOBF">Obfuscator</a>
  - <a href="https://github.com/pyinstaller/pyinstaller">Py2Exe
-
-### [+] Find me on 
-<a href="mailto:dark.help87@yahoo.com" target="_blank"><img src="https://img.shields.io/badge/Email-dark.help87@yahoo.com-blue?style=for-the-badge&logo=gmail"></a>

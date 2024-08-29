@@ -189,3 +189,5 @@ echo Thank you for Using Py2ExeXobfuscator!
 start %SystemRoot%\explorer.exe %cd%
 PAUSE
 exit
+
+exit
